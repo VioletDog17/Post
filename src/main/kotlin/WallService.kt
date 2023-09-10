@@ -8,9 +8,10 @@ class WallService {
         return posts.last()
     }
     fun update(checkingPost:DataPost): Boolean{
-        for (post in posts) {
-            if(post.id == checkingPost.id){
-                add(checkingPost);
+        for (i in posts.indices)
+        {
+            if (posts[i].id == checkingPost.id) {
+                posts[i] = checkingPost
                 return true
             }
         }
