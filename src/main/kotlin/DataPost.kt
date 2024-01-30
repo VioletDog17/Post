@@ -8,5 +8,7 @@ data class DataPost(
     val date: Long = 1160439611, //Время публикации записи в формате unixtime.
     val like: Likes, //Информация о лайках к записи,
     val comment: Comment, //Информация о коментариях к записи,
-    val views: Int = 0 //Информация о просмотрах записи.
+    val views: Int = 0, //Информация о просмотрах записи.
+    val signer_id: DataPost?, //Идентификатор сообщества если от его имени был опубликован пост
+    val attachments: Array<Attachments> = emptyArray()
 )
