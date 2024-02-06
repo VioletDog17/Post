@@ -3,9 +3,9 @@ fun main(args: Array<String>) {
     val likes = Likes()
     val service = WallService()
 
-    val post1 = DataPost(like = likes, comment = comments, signer_id = null, attachments = (arrayOf(PhotoAttachments() , VideoAttachments(), AudioAttachments())))
-    val post2 = DataPost(like = likes, comment = comments, signer_id = null)
-    val post3 = DataPost(like = likes, comment = comments, signer_id = null)
+    val post1 = DataPost(like = likes, signer_id = null, attachments = (arrayOf(PhotoAttachments() , VideoAttachments(), AudioAttachments())))
+    val post2 = DataPost(like = likes,  signer_id = null)
+    val post3 = DataPost(like = likes, signer_id = null)
     service.add(post1)
     service.add(post2)
     service.add(post3)
